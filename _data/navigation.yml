@@ -2,9 +2,9 @@
 # main links links
 main:
 
-  # - title: "About Me"
-  #   url: "/#-about-me"
-  #   data-level: "1"  # 父项
+  - title: "About Me"
+    url: "/#-about-me"
+    data-level: "1"  # 父项
   - title: "Publications"
     url: "/#-publications"
     data-level: "1"  # 父项
