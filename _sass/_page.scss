@@ -49,7 +49,7 @@
 }
 
 .page__content {
-  #about-me{
+  #-about-me{
     margin-top: -10em;
       &:before { 
         content: ''; 
@@ -116,6 +116,7 @@
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
+
 }
 
 .page__hero {
@@ -409,4 +410,23 @@
   margin-bottom: 10px;
   font-size: $type-size-6;
   text-transform: uppercase;
+}
+
+.gold-link {
+  color: gold; /* 或使用 #FFD700 */
+  text-decoration: none; /* 去掉下划线（可选） */
+}
+
+.gold-link:hover {
+  text-decoration: underline; /* 鼠标悬停时显示下划线（可选） */
+}
+
+.gold-link img {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+.gold-link img:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1); /* 鼠标悬停时徽章稍微放大 */
 }
