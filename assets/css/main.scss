@@ -44,10 +44,12 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    // align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
+    // padding: 2em 0 2em 0;
+    padding: 0 0 0 0;
     
 
     .paper-box-image{
@@ -67,6 +69,16 @@
         order: 1;
     }
     
+    .full-width-box  {
+        width: 100%; /* 确保容器宽度占满 */
+    }
+      
+    .full-width-box img {
+        width: 100%; /* 图片宽度占满 */
+        height: auto; /* 保持宽高比 */
+        display: block; /* 避免图片周围的内联元素间隙 */
+    }
+
     @include breakpoint($medium) {
         .paper-box-image{
             justify-content: left;
@@ -87,14 +99,28 @@
 
 }
 
-$scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
-    margin-top: -$scroll_offset;
+.anchor {
+    height: 40px;  /* 根据需要调整 */
+    margin-top: -40px;  /* 让锚点刚好位于标题上方 */
+  }
+
+/* 按钮样式 */
+.download-btn {
+    display: inline-block;
+    padding: 3px 7px;
+    font-size: 13px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none !important; /* 移除下划线 */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
 }
 
 .badge {
@@ -106,4 +132,15 @@ h1:before, .anchor:before {
     color: white;
     background-color: #00369f;
     font-size: .8em;
+}
+
+section {
+    display: none;
+    margin: -22px 0;
+    padding-top: 22px;
+
+}
+
+#-about-me {
+    display: block;
 }
